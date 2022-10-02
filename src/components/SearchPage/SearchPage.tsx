@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { dbProvider } from "../../config/config";
 import * as GetRation from "../../interfaces/IGetRation";
-import { IGetRation } from "../../interfaces/IGetRation";
+import { IGetRation, IGetRationElastic } from "../../interfaces/IGetRation";
 
 const shimmeredDetailsListProps: IListProps = {
   renderedWindowsAhead: 0,
@@ -22,32 +22,35 @@ export default function SearchPage() {
     {
       key: "column1",
       name: "ID",
-      fieldName: GetRation.ID,
+      fieldName: GetRation.ID_ELASTIC,
       // headerClassName: globalStyles.rowDetListHeader,
       // className: globalStyles.rowDetListItem,
-      minWidth: 20,
-      maxWidth: 20,
+      minWidth: 60,
+      maxWidth: 60,
       isRowHeader: true,
       isResizable: true,
       data: "string",
       isPadded: true,
-      onRender: (item: IGetRation) => {
+      onRender: (item: IGetRationElastic) => {
         return <NavLink to={`/DietForm?id=${item.id}`}>{item.id}</NavLink>;
       },
     },
     {
       key: "column2",
       name: "Keywords",
-      fieldName: GetRation.KEYWORDS,
+      fieldName: GetRation.SOURCE_ELASTIC,
       minWidth: 84,
       maxWidth: 112,
       isRowHeader: true,
       isResizable: true,
       data: "string",
       isPadded: true,
+      onRender: (item: IGetRationElastic) => {
+        return <Stack>{JSON.stringify(item.source)}</Stack>;
+      },
     },
   ]);
-  const [items, setItems] = useState<IGetRation[]>();
+  const [items, setItems] = useState<IGetRationElastic[]>();
   const [query, setQuery] = useState<string>();
   const [timer, setTimer] = useState<number>();
 
@@ -56,7 +59,7 @@ export default function SearchPage() {
   }, []);
 
   function setupRations(query: string) {
-    dbProvider.searchRations(query).then((res) => {
+    dbProvider.searchRationsElastic(query).then((res) => {
       setItems(res);
     });
   }

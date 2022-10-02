@@ -39,7 +39,7 @@ export default function FormPage() {
       {rationId && (
         <iframe
           ref={iframeRef}
-          src={`https://localhost:44311/api/ration/GetAppVersionByRationId?id=${rationId}`}
+          src={`https://localhost:44311/api/ration/GetAppVersionByRationIdElastic?id=${rationId}`}
           style={{ width: "100vw", height: "100vh" }}
           allowFullScreen
         ></iframe>
