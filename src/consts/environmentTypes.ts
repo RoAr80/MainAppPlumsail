@@ -9,3 +9,4 @@ export const MAIN_CHANGE = 'mainChange1';
 export const MAIN_CHANGE2 = 'mainChange2';
 export const NEWFEATURE_LOCAL1CHANGE = 'NEWFEATURE_LOCAL1CHANGE1';
 export const NEWFEATURE_LOCAL2CHANGE = 'NEWFEATURE_LOCAL2CHANGE';
+export const MAIN_CHANGE3 = 'mainChange3';
