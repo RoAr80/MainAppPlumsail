@@ -69,7 +69,7 @@ export default function SearchPage() {
     newValue?: string | undefined
   ) => {
     if (newValue === undefined) return;
-    console.log("Newvalue: ", newValue);
+    console.log("Newvaluess: ", newValue);
     clearTimeout(timer);
     const newTimer = window.setTimeout(() => {
       setupRations(newValue);
