@@ -13,3 +13,4 @@ export const MAIN_CHANGE3 = 'mainChange3';
 export const MAIN_CHANGE4 = 'mainChange4';
 export const GREATFEATURE_LOCAL1CHANGE = 'GREATFEATURE_LOCAL1CHANGE';
 export const GREATFEATURE_LOCAL2CHANGE = 'GREATFEATURE_LOCAL2CHANGE';
+export const MAIN_CHANGE5 = 'mainChange5';
