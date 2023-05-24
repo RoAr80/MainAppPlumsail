@@ -69,7 +69,7 @@ export default function SearchPage() {
     newValue?: string | undefined
   ) => {
     if (newValue === undefined) return;
-    console.log("Newvalue: ", newValue);
+    console.log("Newvaluess: ", newValue);
     clearTimeout(timer);
     const newTimer = window.setTimeout(() => {
       setupRations(newValue);
@@ -80,7 +80,7 @@ export default function SearchPage() {
   return (
     <Stack>
       <Stack horizontalAlign="start">
-        <SearchBox placeholder="Search" onChange={onSearchChange} />
+        <SearchBox placeholder="Search..." onChange={onSearchChange} />
         <NavLink to="/DietForm">Create new</NavLink>
       </Stack>
       <ShimmeredDetailsList
