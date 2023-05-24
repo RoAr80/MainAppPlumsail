@@ -18,3 +18,4 @@ export const GREATFEATURE_FEATCHANGE = 'GREATFEATURE_FEATCHANGE';
 export const MAIN_CHANGE6 = 'mainChange6';
 export const FEATNEW = 'FEATNEW';
 export const MAIN_CHANGE6 = 'mainChange6';
+export const FEATNEW_LOCAL1 = 'FEATNEW_LOCAL1';
