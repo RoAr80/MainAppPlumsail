@@ -7,3 +7,4 @@ export const PRODUCTION_MAIN3 = 'productionMain3';
 export const COOLFEATURE_MAIN3 = 'coolFeatureMain3';
 export const MAIN_CHANGE = 'mainChange1';
 export const MAIN_CHANGE2 = 'mainChange2';
+export const NEWFEATURE_LOCAL1CHANGE = 'NEWFEATURE_LOCAL1CHANGE1';
