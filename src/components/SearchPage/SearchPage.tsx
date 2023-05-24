@@ -80,7 +80,7 @@ export default function SearchPage() {
   return (
     <Stack>
       <Stack horizontalAlign="start">
-        <SearchBox placeholder="Search" onChange={onSearchChange} />
+        <SearchBox placeholder="Search..." onChange={onSearchChange} />
         <NavLink to="/DietForm">Create new</NavLink>
       </Stack>
       <ShimmeredDetailsList
